@@ -7,26 +7,26 @@ namespace DemoPatterns.Hubs
     {
         public void Call(Telephone telephone,string displayName)
         {
-            telephone.State.Call();
+            telephone.Call();
             Clients.All.broadcastMessage(displayName, telephone);
         }
 
         public void Hold(Telephone telephone, string displayName)
         {
 
-            telephone.State.HoldCall();
+            telephone.HoldCall();
             Clients.All.broadcastMessage(displayName, telephone);
         }
 
         public void Connect(Telephone telephone, string displayName)
         {
-            telephone.State.AcceptCall();
+            telephone.AcceptCall();
             Clients.All.broadcastMessage(displayName, telephone);
         }
 
         public void Disconnect(Telephone telephone, string displayName)
         {
-            telephone.State.DenyCall();
+            telephone.DenyCall();
             Clients.All.broadcastMessage(displayName, telephone);
         }
     }

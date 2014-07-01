@@ -22,7 +22,25 @@ namespace DemoPatterns.PatternClasses
         }
 
         public TelephoneState State { get; internal set; }
+        public  void AcceptCall()
+        {
+            State.AcceptCall();
+        }
 
+        public void DenyCall()
+        {
+            State.DenyCall();
+        }
+
+        public  void HoldCall()
+        {
+            State.HoldCall();
+        }
+
+        public  void Call()
+        {
+            State.Call();
+        }
         public string Status
         {
             get
